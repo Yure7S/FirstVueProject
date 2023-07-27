@@ -11,10 +11,14 @@ module.exports = {
     colors: {
       'base': '#000000',
       'main': '#F59E0B',
-      'secondary': '#ff7849',
-      'color': '#ffffff',
-      'error': '#13ce66',
-      'success': '#ffc82c',
+      'secondary': '#ffebc9',
+      'error': '#d10f0f',
+      'success': '#0fd153',
+      'alert': '#ffa70f',
+      colortx: {
+        'white': '#ffffff',
+        'dark': '#000000',
+      },
     },
     screens: {
       'tablet': '640px',
