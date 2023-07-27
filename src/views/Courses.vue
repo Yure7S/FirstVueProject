@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h2 class="">Home</h2>
+    <h2 class="">Courses</h2>
   </main>
 </template>
