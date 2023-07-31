@@ -12,7 +12,8 @@ import InputSubmit from "./Common/InputSubmit.vue"
             <InputComponent class=" w-2/3 my-3 mx-auto" pholder="Password" required="true" tp="text"/>
             <InputSubmit content="Enviar"/>
         </div>
-        <div class="bg-base-contrast w-1/2 h-full flex align-middle justify-center">
+        <div class="bg-secondary w-1/2 h-full flex align-middle justify-center">
+            <img src="../../public/undraw_mobile_testing_re_w7yb.svg" alt="Ilustration">
         </div>
     </section>
 </template>
