@@ -12,7 +12,7 @@ module.exports = {
       'base': '#000000',
       'base-contrast': '#212121',
       'main': '#F59E0B',
-      'secondary': '#ffebc9',
+      'secondary': '#ededed',
       'error': '#d10f0f',
       'success': '#0fd153',
       'alert': '#ffa70f',
