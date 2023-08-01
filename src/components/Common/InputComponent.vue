@@ -2,7 +2,7 @@
 defineProps({
   name: String,
   pholder: String,
-  tp: Boolean,
+  tp: String,
   req: Boolean
 })
 </script>
