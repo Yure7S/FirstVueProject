@@ -17,7 +17,7 @@ import Link from './Common/Link.vue'
             <Link content="Student Area" route="/studentArea"></Link>
         </nav>
         <div class="w-1/5 flex justify-end gap-6">
-            <RouterLink class="mx-8" to="/login">
+            <RouterLink class="mx-8" to="/authentication">
                 <Button class="bg-main text-base" content="Login"/>
             </RouterLink>
         </div>
