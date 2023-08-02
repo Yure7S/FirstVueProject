@@ -1,21 +1,12 @@
 <script setup>
-import { ref, reactive } from 'vue' 
-// ref - usado para tipos primitivos
-// reactive - usado somente para objetos
+import { reactive } from 'vue' 
 import InputComponent from "./Common/InputComponent.vue"
 import InputSubmit from "./Common/InputSubmit.vue"
 
-// let email = ref("")
-// let password = ref("")
-
-let loginData = reactive({
-    email,
-    password
+const loginData = reactive({
+    email: "",
+    password: ""
 })
-
-let login = () => {
-    console.log(loginData)
-}
 
 </script>
 
@@ -24,8 +15,8 @@ let login = () => {
         <form @submit.prevent="login" class="bg-base-contrast w-1/2 h-full">
             <div class=" w-full h-full flex flex-col justify-center align-middle">
                 <h2 class=" text-main font-bold text-4xl text-center mb-11">Login</h2>
-                <InputComponent v-model="loginData.email" class=" w-2/3 my-3 mx-auto" pholder="E-mail" required="true" tp="text"/>
-                <InputComponent v-model="loginData.password" class=" w-2/3 my-3 mx-auto" pholder="Password" required="true" tp="password"/>
+                <input v-model="loginData.email" class="w-2/3 my-3 mx-auto p-2 text-colortx-dark rounded-sm bg-secondary" placeholder="E-mail" required type="text">
+                <input v-model="loginData.password" class="w-2/3 my-3 mx-auto p-2 text-colortx-dark rounded-sm bg-secondary" placeholder="Password" required type="password">
                 <InputSubmit content="Enviar"/>
             </div>
         </form>
