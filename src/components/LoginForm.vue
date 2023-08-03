@@ -1,12 +1,11 @@
 <script setup>
 import { reactive } from 'vue' 
-import { AxiosInstance } from 'axios';
-import axios from 'axios';
+import app from '../services/axios.config'
 import InputSubmit from "./Common/InputSubmit.vue"
 
-let usingAxios = () => {
-  axios.get("https://jsonplaceholder.typicode.com/posts")
-  .then(response => )
+let usingAxios = async () => {
+    let response = await app.get("/posts")
+    console.log(response)
 }
 
 const loginData = reactive({
