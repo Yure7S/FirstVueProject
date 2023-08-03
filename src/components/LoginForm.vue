@@ -3,8 +3,8 @@ import { reactive } from 'vue'
 import app from '../services/axios.config'
 import InputSubmit from "./Common/InputSubmit.vue"
 
-let usingAxios = async () => {
-    let response = await app.get("/posts")
+let login = async () => {
+    let response = await app.post("/posts")
     console.log(response)
 }
 
@@ -12,10 +12,6 @@ const loginData = reactive({
     email: "",
     password: ""
 })
-
-let login = () => {
-    usingAxios()
-}
 
 </script>
 
