@@ -3,16 +3,15 @@ import { reactive } from 'vue'
 import app from '../services/axios.config'
 import InputSubmit from "./Common/InputSubmit.vue"
 
-let login = async () => {
-    let response = await app.post("/posts")
-    console.log(response)
-}
-
 const loginData = reactive({
     email: "",
     password: ""
 })
 
+let login = async () => {
+    let response = await app.post("/authentication", loginData)
+    console.log(response)
+}
 </script>
 
 <template>

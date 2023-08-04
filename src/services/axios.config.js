@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const app = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com',
+    baseURL: 'https://localhost:7023/',
     headers: {
         'Content-Type': 'application/json'
     }
