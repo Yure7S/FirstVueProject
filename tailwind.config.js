@@ -33,8 +33,8 @@ module.exports = {
     },
     height: {
       sm: '8px',
-      md: '16px',
-      lg: '500px',
+      md: '500px',
+      lg: '680px',
       xl: '1000px',
       'full': '100%',
     },
