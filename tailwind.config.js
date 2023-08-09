@@ -11,6 +11,7 @@ module.exports = {
     colors: {
       'base': '#000000',
       'base-contrast': '#212121',
+      'base-contrast-02': '#454545',
       'main': '#F59E0B',
       'secondary': '#ededed',
       'error': '#d10f0f',
@@ -19,14 +20,16 @@ module.exports = {
       colortx: {
         'white': '#ffffff',
         'dark': '#000000',
+        'soft': '#6b6b6b'
       },
     },
     screens: {
-      '1': '640px',
+      '1': '320px',
       '2': '840px',
       '3': '1024px',
-      '4': '1380px',
-      sm: '480px',
+      '4': '1040px',
+      '5': '1380px',
+      sm: '420px',
       md: '768px',
       lg: '976px',
       xl: '1440px',

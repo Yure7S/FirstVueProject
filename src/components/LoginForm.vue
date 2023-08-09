@@ -1,6 +1,6 @@
 <script setup>
 import { reactive } from 'vue' 
-import app from '../services/axios.config'
+import app from '../config/axios.config'
 import InputSubmit from "./Common/InputSubmit.vue"
 
 const loginData = reactive({
