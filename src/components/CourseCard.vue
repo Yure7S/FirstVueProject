@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import Link from "./common/link.vue";
 import Button from "../components/Common/Button.vue"
 </script>
 
@@ -11,7 +12,7 @@ import Button from "../components/Common/Button.vue"
             <p>a partir de</p>
             <p><span class="font-bold text-xl">R$ 1530,00</span> por mês</p>
         </div>
-        <RouterLink class="text-colortx-soft text-sm" to="/">SAIBA MAIS</RouterLink>
+        <Link class="text-colortx-soft text-sm" to="/" content="SAIBA MAIS"></Link>
         <hr class=" mt-8 text-base-contrast-02">
         <Button class=" text-sm text-main border mt-5 float-right" content="INSCREVA-SE"></Button>
     </div>
