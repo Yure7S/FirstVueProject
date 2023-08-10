@@ -15,7 +15,7 @@ let login = async () => {
 </script>
 
 <template>
-    <section class="w-11/12 h-md mx-auto mt-28 max-w-screen-2 rounded-lg overflow-hidden flex">
+    <section class="w-11/12 h-md mx-auto mt-28 max-w-screen-3 rounded-lg overflow-hidden flex">
         <form @submit.prevent="login" class="bg-base-contrast mx-auto rounded-lg max-w-sm w-full h-full md:w-1/2 md:max-w-none">
             <div class="w-full h-full flex flex-col justify-center align-middle">
                 <h2 class=" text-main font-bold text-4xl text-center mb-11">Login</h2>

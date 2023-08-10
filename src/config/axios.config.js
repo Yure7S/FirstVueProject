@@ -8,3 +8,12 @@ const app = axios.create({
 });
 
 export default app
+
+/* 
+
+API route:
+
+https://localhost:7023/
+
+
+*/
