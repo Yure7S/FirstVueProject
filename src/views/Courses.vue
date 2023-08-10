@@ -1,24 +1,20 @@
 <script setup>
 import CourseCard from '../components/CourseCard.vue';
+import app from '../config/axios.config';
 
-let itens = [
-  {
-    nome: "Culinária",
-    tempo: "Bacharelado - 5 years",
-    price: "1.000"
-  },
-  {
-    nome: "Engenharia",
-    tempo: "Bacharelado - 4 years",
-    price: "1.350"
+let courses = await app.get("/courses", {
+  headers: {
+    'Authorization': `Bearer ${token}`
   }
-]
+})
+
+console.log(courses.data)
 
 </script>
 
 <template>
   <section class="flex max-w-screen-1 gap-10 mt-20 flex-wrap mx-auto md:max-w-screen-3 lg:max-w-screen-4">
-    <CourseCard v-for="element in itens">
+    <CourseCard v-for="element in itens" :key="element">
       <template #title>
         {{ element.nome }}
       </template>
