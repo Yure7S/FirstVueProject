@@ -14,6 +14,7 @@ const loginData = reactive({
 let login = async () => {
     let response = await app.post("/authentication", loginData)
     auth.setToken(response.data.token)
+    console.log(auth.token)
 }
 </script>
 

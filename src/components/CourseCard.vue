@@ -1,5 +1,5 @@
 <script setup>
-import Link from "./common/link.vue";
+import Link from "./Common/Link.vue";
 import Button from "../components/Common/Button.vue"
 
 defineProps({

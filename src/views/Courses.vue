@@ -1,32 +1,30 @@
 <script setup>
 import CourseCard from '../components/CourseCard.vue';
+import { userAuthStore } from '../services/loginService';
 import app from '../config/axios.config';
 
-// let courses = await app.get("/courses", {
-//   headers: {
-//     'Authorization': `Bearer ${token}`
-//   }
-// })
+const auth = userAuthStore()
 
-localStorage.setItem("acesso", "Testando o local storage")
-console.log(localStorage.getItem("acesso"))
-localStorage.removeItem("acesso")
-
-// console.log(courses.data)
-
+let courses = await app.get("/courses", {
+  headers: {
+    'Authorization': `Bearer ${auth.token}`
+  }
+})
+let data = courses.data
+console.log(data)
 </script>
 
 <template>
   <section class="flex max-w-screen-1 gap-10 mt-20 flex-wrap mx-auto md:max-w-screen-3 lg:max-w-screen-4">
-    <CourseCard v-for="element in itens" :key="element">
+    <CourseCard>
       <template #title>
-        {{ element.nome }}
+        sdfsd
       </template>
       <template #tipe-course>
-        {{ element.tempo }}
+        sdfdsf
       </template>
       <template #price>
-        {{ element.price }}
+        sdfsdf
       </template>
     </CourseCard>
   </section>

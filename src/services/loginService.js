@@ -10,6 +10,7 @@ export const userAuthStore = defineStore('auth', () => {
     }
 
     return {
-        setToken
+        setToken, 
+        token
     }
 });
