@@ -1,16 +1,19 @@
 <script setup>
 import { reactive } from 'vue' 
+import { userAuthStore } from '../services/loginService.js';
 import app from '../config/axios.config'
 import InputSubmit from "./Common/InputSubmit.vue"
 
+const auth = userAuthStore()
+
 const loginData = reactive({
-    email: "",
-    password: ""
+    email: "adminusername@gmail.com",
+    password: "1234567812345678"
 })
 
 let login = async () => {
     let response = await app.post("/authentication", loginData)
-    console.log(response)
+    auth.setToken(response.data.token)
 }
 </script>
 

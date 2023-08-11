@@ -2,13 +2,17 @@
 import CourseCard from '../components/CourseCard.vue';
 import app from '../config/axios.config';
 
-let courses = await app.get("/courses", {
-  headers: {
-    'Authorization': `Bearer ${token}`
-  }
-})
+// let courses = await app.get("/courses", {
+//   headers: {
+//     'Authorization': `Bearer ${token}`
+//   }
+// })
 
-console.log(courses.data)
+localStorage.setItem("acesso", "Testando o local storage")
+console.log(localStorage.getItem("acesso"))
+localStorage.removeItem("acesso")
+
+// console.log(courses.data)
 
 </script>
 
