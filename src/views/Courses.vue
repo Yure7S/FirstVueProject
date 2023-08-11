@@ -1,28 +1,30 @@
 <script setup>
 import CourseCard from '../components/CourseCard.vue';
+import { userAuthStore } from '../services/loginService';
 import app from '../config/axios.config';
+
+const auth = userAuthStore()
 
 let courses = await app.get("/courses", {
   headers: {
-    'Authorization': `Bearer ${token}`
+    'Authorization': `Bearer ${auth.token}`
   }
 })
-
-console.log(courses.data)
-
+let data = courses.data
+console.log(data)
 </script>
 
 <template>
   <section class="flex max-w-screen-1 gap-10 mt-20 flex-wrap mx-auto md:max-w-screen-3 lg:max-w-screen-4">
-    <CourseCard v-for="element in itens" :key="element">
+    <CourseCard>
       <template #title>
-        {{ element.nome }}
+        sdfsd
       </template>
       <template #tipe-course>
-        {{ element.tempo }}
+        sdfdsf
       </template>
       <template #price>
-        {{ element.price }}
+        sdfsdf
       </template>
     </CourseCard>
   </section>
