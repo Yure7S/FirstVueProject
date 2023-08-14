@@ -4,7 +4,6 @@ import Button from "../components/Common/Button.vue"
 
 defineProps({
     rote: String,
-
 })
 
 </script>
