@@ -8,7 +8,7 @@ const auth = userAuthStore()
 
 const loginData = reactive({
     email: "adminusername@gmail.com",
-    password: "1234567812345678"
+    password: "87654321"
 })
 
 let login = async () => {

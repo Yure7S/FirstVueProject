@@ -5,22 +5,26 @@ import app from '../config/axios.config';
 import { onMounted, ref } from 'vue';
 
 const auth = userAuthStore()
-let corses = ref([])
+let data = ref([])
 
-onMounted(async () => {
-  let response = await app.get("/courses", {
+let response = await app.get("/courses", {
     headers: {
       'Authorization': `Bearer ${auth.token}`
     }
   })
-  corses.value = response.data
-})
+  data.value = response.data
+  console.log(typeof data.value.length)
+
+// onMounted(async () => {
+  
+// })
 </script>
 
 <template>
-  <h1>Testando</h1>
-  <section class="flex max-w-screen-1 gap-10 mt-20 flex-wrap mx-auto md:max-w-screen-3 lg:max-w-screen-4">
-        <CourseCard v-for="item in corses" :key="item.code" rote="/">
+  <Suspense >
+    <template #default>
+      <section class="flex max-w-screen-1 gap-10 mt-20 flex-wrap mx-auto md:max-w-screen-3 lg:max-w-screen-4">
+        <CourseCard v-for="item in data" :key="item.code" rote="/">
           <template #title>
             {{ item.fullName }}
           </template>
@@ -31,5 +35,10 @@ onMounted(async () => {
             {{ item.price }}
           </template>
         </CourseCard>
-  </section>
+      </section>
+    </template>
+    <template #fallback>
+      <h1>Carregando..</h1>
+    </template>
+  </Suspense>
 </template>
