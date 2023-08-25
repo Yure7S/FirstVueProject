@@ -1,6 +1,12 @@
 <script setup>
+import SideBar from '../components/SideBar.vue';
 </script>
 
 <template>
-  <h2 class="">Student Area</h2>
+  <section class="mt-20 flex">
+    <SideBar></SideBar>
+    <div class="">
+
+    </div>
+  </section>
 </template>

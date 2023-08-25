@@ -15,6 +15,7 @@ import Link from './Common/Link.vue'
             <Link content="Home" route="/"></Link>
             <Link content="Courses" route="/courses"></Link>
             <Link content="Student Area" route="/studentArea"></Link>
+            <Link content="Dashboard" route="/dashboard"></Link>
         </nav>
         <div class="w-1/5 flex justify-end gap-6">
             <RouterLink class="mx-8" to="/authentication">
